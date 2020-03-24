@@ -2,5 +2,4 @@
   <text id="timeLabel" />
   <text id="dateLabel" />
   <text id="heartRateLabel" />
-  <text id="locationLabel" />
 </svg>

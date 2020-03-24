@@ -5,7 +5,7 @@ import * as util from "../common/utils";
 import { HeartRateSensor } from "heart-rate";
 import { me as appbit } from "appbit";
 import { display } from "display";
-
+import { geolocation } from "geolocation";
 // Update the clock every minute
 clock.granularity = "seconds";
 
@@ -13,7 +13,6 @@ clock.granularity = "seconds";
 const timeLabel = document.getElementById("timeLabel");
 const dateLabel = document.getElementById("dateLabel");
 const heartRateLabel = document.getElementById("heartRateLabel");
-const locationLabel = document.getElementById("locationLabel");
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
@@ -31,8 +30,8 @@ clock.ontick = (evt) => {
   let minutes = util.zeroPad(today.getMinutes());
   let seconds = util.zeroPad(today.getSeconds());
 
-  let day = util.zeroPad(today.getDay());
-  let month = util.zeroPad(today.getMonth());
+  let day = util.zeroPad(today.getDate());
+  let month = util.zeroPad(today.getMonth() + 1);
   let year = today.getFullYear();
 
   timeLabel.text = `${hours}:${minutes}:${seconds}`;
@@ -46,12 +45,14 @@ clock.ontick = (evt) => {
     });
     display.addEventListener("change", () => {
       // Automatically stop the sensor when the screen is off to conserve battery
-      display.on ? hrm.start() : hrm.stop();
+      if (display.on) {
+        hrm.start();
+      }
+      else {
+        hrm.stop();
+      }
     });
 
     hrm.start();
   }
-  
-  locationLabel.text = "Some text at the bottom";
 }
-
