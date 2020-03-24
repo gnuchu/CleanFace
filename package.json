@@ -1,6 +1,6 @@
 {
   "fitbit": {
-    "appUUID": "47595e61-8574-4c42-802c-f1ef8fe99924",
+    "appUUID": "a6fb46c2-4ebd-4d5b-b819-8eeddc907fe5",
     "appType": "clockface",
     "appDisplayName": "CleanFace",
     "iconFile": "resources/icon.png",
@@ -21,6 +21,9 @@
     "defaultLanguage": "en-US"
   },
   "devDependencies": {
-    "@fitbit/sdk": "~4.1.0"
+    "@fitbit/sdk": "^4.1.0"
+  },
+  "dependencies": {
+    "@fitbit/sdk-cli": "^1.7.1"
   }
 }
