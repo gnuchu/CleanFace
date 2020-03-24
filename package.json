@@ -1,0 +1,26 @@
+{
+  "fitbit": {
+    "appUUID": "47595e61-8574-4c42-802c-f1ef8fe99924",
+    "appType": "clockface",
+    "appDisplayName": "CleanFace",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_location",
+      "run_background"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "CleanFace"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}

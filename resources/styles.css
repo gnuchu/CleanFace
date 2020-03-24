@@ -1,0 +1,44 @@
+.background {
+  viewport-fill: black;
+}
+
+#timeLabel {
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 20%+20;
+  fill: white;
+}
+
+#dateLabel {
+  font-size: 40;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 20%+65;
+  fill: #7c7c79;
+}
+
+#heartRateLabel {
+  font-size: 40;
+  font-family: System-Bold;
+  text-length: 10;
+  text-anchor: middle;
+  x: 50%;
+  y: 20%+115;
+  fill: #7c7c79;
+}
+
+#locationLabel {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 50;
+  text-anchor: middle;
+  x: 50%;
+  y: 95%;
+  fill: #7c7c79;  
+}
+
