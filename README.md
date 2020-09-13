@@ -1,4 +1,4 @@
-### CleanFace
+### CleanFace for FitBit OS.
 
 Simple watch face with time, heart rate and date. 
 
